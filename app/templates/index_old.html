@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<form action="" methods='POST' id="uploadImage" enctype='multipart/form-data'>
+<div class="input-group mb-3">
+  <div class="input-group-prepend">
+    <input type="submit" class="btn btn-primary" value="Upload">
+  </div>
+  <div class="custom-file">
+    <input type="file" class="custom-file-input" id="selectImage" name='image'>
+    <label class="custom-file-label" for="selectImage">Choose file</label>
+  </div>
+</div>
+</form>
+
+<span><img src="" alt="Original photo" id='grayImage'></span>
+<span><img src="" alt="Encoded photo" id="encodedImage"></span>
+<div class="dropdown">
+	  <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+	      Select configuration
+	  </button>
+	  <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
+	  <button class="dropdown-item" type="button" value='1'>Configuration 1</button>
+	  <button class="dropdown-item" type="button" value="2">Configuration 2</button>
+          <button class="dropdown-item" type="button" value="3">Configuration 3</button>
+	  <button class="dropdown-item" type="button" value="4">Configuration 4</button>
+	  <button class="dropdown-item" type="button" value="5">Configuration 5</button>
+	</div>
+</div>
+
+{% endblock %}

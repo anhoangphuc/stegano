@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% block redirect %}
+<button id="reload" class="btn btn-primary" type="button">Reload</button>
+
+<div>
+<span><img src="{{ url_for('static', filename='logo.jpg') }}" alt="Original photo" id='message'></span>
+<span><img src="{{ url_for('static', filename='logo.jpg') }}" alt="Encoded photo" id="decoded_message"></span>
+</div>
+
+<div><span><p>Bit error: </p></span><span><p id="bit_error"></p></span></div>
+<div><span><p>Message length: </p></span><span><p id="message_length"></p></span></div>
+<div><span><p>Bit error rate: </p></span><span><p id="accr"></p></span></div>
+{% endblock %}
+
+{% block script %}
+<script type="text/javascript" src="{{ url_for('static', filename='detail.js') }}"></script>
+{% endblock %}
